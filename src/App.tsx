@@ -1,10 +1,11 @@
-import { Button, Link, ButtonGroup, Icon, SvgIcon, IconButton, Container } from "@mui/material";
+import { Button, Link, ButtonGroup, Container, Typography } from "@mui/material";
 import AcUnitSharpIcon from "@mui/icons-material/AcUnitSharp";
 
 const App = () => {
 	return (
-		<Container maxWidth="md">
-			<h1>Aprendiendo MaterialUi</h1>
+		<Container maxWidth="md" sx={{ marginBottom: "3em" }}>
+			{/* Main TItle */}
+			<Typography variant="h1">Material UI con Bluuweb</Typography>
 			<p>
 				Material UI es un framework para React que nos permite trabajar de manera más sencilla y de manera
 				modularizada con componentes, siguiendo los estilos de{" "}
@@ -14,7 +15,8 @@ const App = () => {
 				de Google.
 			</p>
 
-			<h2>Importando componentes</h2>
+			{/* Componentes */}
+			<Typography variant="h2">Importando componentes</Typography>
 			<p>
 				Al trabajar con React, los componentes se trabajan de forma similar a como se trabaja con otras librerias
 				modularizadas como React-Bootstrap; el cual nos ofrece un set de componentes ya con los estilos de Bootstrap
@@ -25,6 +27,8 @@ const App = () => {
 				<div>
 					<small>Componente importado</small>
 				</div>
+
+				{/*  */}
 				<ButtonGroup variant="text" color="primary">
 					<Button variant="contained" disableElevation>
 						hola
@@ -32,41 +36,45 @@ const App = () => {
 					<Button variant="outlined">hola</Button>
 					<Button variant="text">hola</Button>
 				</ButtonGroup>
+				{/*  */}
 			</div>
+
 			<p>
 				Al igual que con ReactBootstrap, la documentación oficial de MaterialUi contiene componentes prediseñados
 				que podemos usar de manera gratuita debido a que cuenta con la licencia MIT.
 			</p>
-			<h2>Usando los Iconos de MaterialUI</h2>
+
+			{/* Iconos */}
+			<Typography variant="h2">Iconos de Material UI</Typography>
 			<p>
 				Los iconos de Material UI On incorporados como SVG permitiendo que los tiempos de carga sean mucho mejores y
 				mejorando asi el rendimiento de nuestras apps.
 			</p>
 			<p>Como son componentes podemos pasarle props que nos permitan modificar el comportamiento de nuestra app.</p>
 
-			<h3>Formas para importar Iconos de MaterialUi</h3>
+			<Typography variant="h3">Formas para importar Iconos de MaterialUi</Typography>
 			<p>
 				La forma principal para llamar a los iconos es llamandolo como un componente. Esto nos permite utilizar
 				ciertas caracteristicas del componente como veremos a continuación.
 			</p>
 
-			<h4>Llamando a Icono</h4>
+			<Typography variant="h4">Llamando a Icono</Typography>
 			<AcUnitSharpIcon />
 
-			<h3>Modificando colores</h3>
+			<Typography variant="h3">Modificando colores</Typography>
 			<p>Los colores se pueden modificar mediante la prop "color"</p>
 			<AcUnitSharpIcon color="primary" />
 			<AcUnitSharpIcon color="action" />
 			<AcUnitSharpIcon color="error" />
 
-			<h3>Modificando tamaño</h3>
+			<Typography variant="h3">Modificando tamaño</Typography>
 			<p>El tamaño se modifica mediante la prop fontSize</p>
 			<AcUnitSharpIcon fontSize="large" />
 			<AcUnitSharpIcon fontSize="medium" />
 			<AcUnitSharpIcon fontSize="small" />
 			<AcUnitSharpIcon fontSize="inherit" />
 
-			<h5>SX en general.</h5>
+			<Typography variant="h5">SX en general.</Typography>
 			<p>
 				La prop sx es el equivalente a la prop style pero optimizada para los componentes de MaterialUI. Recibe un
 				objeto con las confguraciones de igual manera a como trabajamos con la prop style de react.
@@ -76,7 +84,7 @@ const App = () => {
 
 			<AcUnitSharpIcon sx={{ fontSize: "5em" }} />
 
-			<h3>Comportamiento para los botones</h3>
+			<Typography variant="h3">Comportamiento para los botones</Typography>
 			<p>
 				Con los botones hay un comportamiento especial debido a que estos pueden recibir un icono como prop el cual
 				renderizará dentro del boton.
@@ -92,6 +100,47 @@ const App = () => {
 			<Button variant="contained" disableElevation startIcon={<AcUnitSharpIcon />} endIcon={<AcUnitSharpIcon />}>
 				Enfriar pensamientos
 			</Button>
+
+			{/* Typography */}
+			<Typography variant="h2">Typography</Typography>
+			<p>
+				Este componente nos permite renderizar elementos de texto de forma que funcione la manera más eficiente y
+				sin problemas dentro del layout.
+			</p>
+			<p>
+				Lo que nos permite es acceder a las configuraciones globales del framework, haciendo que el trabajar con
+				temas diferentes sea mucho más sencillo y eficiente. Para que no tengamos que escribir código innecesario
+				dentro de nuestra app.{" "}
+			</p>
+			<p>
+				En la documentación aparece la api de manera con todos los elementos que podemos modificar dentro de esta.
+			</p>
+
+			{/*  */}
+			<Typography variant="h1" color="initial">
+				Renderizando un h1
+			</Typography>
+			<Typography variant="h2" color="danger">
+				Renderizando un h2
+			</Typography>
+			<Typography variant="h3" color="initial">
+				Renderizando un h3
+			</Typography>
+			{/*  */}
+
+			<p>
+				Este componente contiene los props necesarios para poder trabajar de una forma más moderna con los
+				componentes
+			</p>
+
+			{/* makeStyle */}
+			<Typography variant="h2">makeStyle()</Typography>
+			<p></p>
+
+			{/*  */}
+			<Button>Boton predeterminado</Button>
+			<Button>Boton personalizado</Button>
+			{/*  */}
 		</Container>
 	);
 };
