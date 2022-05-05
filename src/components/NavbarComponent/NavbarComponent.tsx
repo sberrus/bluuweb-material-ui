@@ -20,7 +20,7 @@ const NavbarComponent = () => {
 	return (
 		<AppBar position="sticky" color="primary">
 			<Container>
-				<Toolbar>
+				<Toolbar disableGutters>
 					<IconButton color="inherit" aria-label="menu" className={classes.menuButton}>
 						<MenuIcon />
 					</IconButton>
