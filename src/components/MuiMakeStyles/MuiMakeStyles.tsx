@@ -1,0 +1,31 @@
+import { Button, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import React from "react";
+
+// Antes que nada hay que recalcar que en la versión 5 de MUI ya no se utiliza makestyles. Pero si se puede compatibilizar realizando una serie de configuracioens previas
+// Primero hay que instalar el paquete @mui/styles. Y en el directorio raiz hay que definir un theme predeterminado para poder hacer uso del makeStyles.
+
+const useStyle = makeStyles({
+	botonPersonalizado: {
+		color: "red",
+	},
+});
+
+const MuiMakeStyles = () => {
+	const classes = useStyle();
+
+	return (
+		<>
+			{/* makeStyle */}
+			<Typography variant="h2">makeStyle()</Typography>
+			<p></p>
+
+			{/*  */}
+			<Button>Boton predeterminado</Button>
+			<Button className={classes.botonPersonalizado}>Boton personalizado</Button>
+			{/*  */}
+		</>
+	);
+};
+
+export default MuiMakeStyles;
