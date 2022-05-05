@@ -5,17 +5,21 @@ import MuiCreateTheme from "./components/MuiCreateTheme/MuiCreateTheme";
 import MuiIcons from "./components/MuiIcons/MuiIcons";
 import MuiMakeStyles from "./components/MuiMakeStyles/MuiMakeStyles";
 import MuiTypography from "./components/MuiTypography/MuiTypography";
+import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 
 const App = () => {
 	return (
-		<Container maxWidth="md" sx={{ marginBottom: "3em" }}>
-			<Header />
-			<MuiComponents />
-			<MuiIcons />
-			<MuiTypography />
-			<MuiMakeStyles />
-			<MuiCreateTheme />
-		</Container>
+		<>
+			<NavbarComponent />
+			<Container>
+				<Header />
+				<MuiComponents />
+				<MuiIcons />
+				<MuiTypography />
+				<MuiMakeStyles />
+				<MuiCreateTheme />
+			</Container>
+		</>
 	);
 };
 
