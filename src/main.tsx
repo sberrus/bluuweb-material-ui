@@ -5,7 +5,14 @@ import App from "./App";
 import "./index.css";
 
 // Creamos un theme para poder usar makeStyles*
-const theme = createTheme();
+const theme = createTheme({
+	typography: {
+		h1: { fontSize: "3em" },
+		h2: { fontSize: "2.5em" },
+		h3: { fontSize: "2em" },
+		h4: { fontSize: "1.5em" },
+	},
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>

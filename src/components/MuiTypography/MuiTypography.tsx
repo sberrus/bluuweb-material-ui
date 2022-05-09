@@ -21,13 +21,13 @@ const MuiTypography = () => {
 
 			{/*  */}
 			<Typography variant="h1" color="initial">
-				Renderizando un h1
+				Esto es un h1
 			</Typography>
 			<Typography variant="h2" color="danger">
-				Renderizando un h2
+				Esto es un h2
 			</Typography>
 			<Typography variant="h3" color="initial">
-				Renderizando un h3
+				Esto es un h3
 			</Typography>
 			{/*  */}
 

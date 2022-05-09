@@ -7,7 +7,9 @@ import React from "react";
 
 const useStyle = makeStyles({
 	botonPersonalizado: {
-		color: "red",
+		// Al igual que el uso en CSS el uso de la kw !imporant no es recomendado pero para este ejemplo especifico lo haremos
+		backgroundColor: "#000 !important",
+		color: "red !important",
 	},
 });
 
@@ -18,7 +20,6 @@ const MuiMakeStyles = () => {
 		<>
 			{/* makeStyle */}
 			<Typography variant="h2">makeStyle()</Typography>
-			<p></p>
 
 			{/*  */}
 			<Button>Boton predeterminado</Button>
