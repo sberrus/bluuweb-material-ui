@@ -4,9 +4,11 @@ import Typography from "@mui/material/Typography";
 import { Button, Container, IconButton } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import NavbarMenu from "../NavbarMenu/NavbarMenu";
 
 const useStyles = makeStyles({
 	menuButton: {
+		color: "#fff",
 		marginRight: "30px",
 	},
 	title: {
@@ -21,9 +23,9 @@ const NavbarComponent = () => {
 		<AppBar position="sticky" color="primary">
 			<Container>
 				<Toolbar disableGutters>
-					<IconButton color="inherit" aria-label="menu" className={classes.menuButton}>
+					<NavbarMenu>
 						<MenuIcon />
-					</IconButton>
+					</NavbarMenu>
 					<Typography variant="h6" className={classes.title}>
 						Hellow
 					</Typography>
