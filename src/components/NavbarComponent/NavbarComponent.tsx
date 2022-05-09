@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { Button, Container, IconButton } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import NavbarMenu from "../NavbarMenu/NavbarMenu";
+import NavbarMenu from "./components/DrawerComponent/DrawerComponent";
 
 const useStyles = makeStyles({
 	menuButton: {

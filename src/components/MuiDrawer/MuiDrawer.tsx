@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import NavbarMenu from "../NavbarMenu/NavbarMenu";
+import NavbarMenu from "../NavbarComponent/components/DrawerComponent/DrawerComponent";
 
 const MuiDrawer = () => {
 	return (
