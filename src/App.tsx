@@ -1,5 +1,6 @@
-import { Button, Link, ButtonGroup, Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import Header from "./components/Header/Header";
+import MuiBreakpoints from "./components/MuiBreakpoints/MuiBreakpoints";
 import MuiComponents from "./components/MuiComponents/MuiComponents";
 import MuiCreateTheme from "./components/MuiCreateTheme/MuiCreateTheme";
 import MuiDrawer from "./components/MuiDrawer/MuiDrawer";
@@ -12,7 +13,11 @@ const App = () => {
 	return (
 		<>
 			<NavbarComponent />
-			<Container>
+			<Container
+				sx={{
+					marginBottom: "3em",
+				}}
+			>
 				<Header />
 				<MuiComponents />
 				<MuiIcons />
@@ -20,6 +25,7 @@ const App = () => {
 				<MuiMakeStyles />
 				<MuiCreateTheme />
 				<MuiDrawer />
+				<MuiBreakpoints />
 			</Container>
 		</>
 	);

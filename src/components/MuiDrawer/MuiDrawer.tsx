@@ -5,12 +5,9 @@ const MuiDrawer = () => {
 	return (
 		<>
 			<Typography variant="h2" color="dark">
-				Drawer (Navbar lateral)
+				Componente Drawer (Navbar lateral offcanvas)
 			</Typography>
-			<p>
-				El drawer es un componente de MUI que nos permite crear un navegador para nuestra app de manera sencilla.
-			</p>
-			<NavbarMenu />
+			<p>sin mucho que añadir la verdad 🤷‍♂️</p>
 		</>
 	);
 };
