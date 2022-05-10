@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import NavbarMenu from "../NavbarComponent/components/DrawerComponent/DrawerComponent";
 
 const MuiDrawer = () => {
 	return (
@@ -7,7 +6,9 @@ const MuiDrawer = () => {
 			<Typography variant="h2" color="dark">
 				Componente Drawer (Navbar lateral offcanvas)
 			</Typography>
-			<p>sin mucho que añadir la verdad 🤷‍♂️</p>
+			<p>
+				Los drawers en MUI son componentes que nos permiten crear menús especiales en MUI con sus estilos definidos.
+			</p>
 		</>
 	);
 };
