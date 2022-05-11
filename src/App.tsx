@@ -1,6 +1,7 @@
 import { Container, Hidden } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Header from "./components/Header/Header";
+import MuiBox from "./components/MuiBox/MuiBox";
 import MuiBreakpoints from "./components/MuiBreakpoints/MuiBreakpoints";
 import MuiComponents from "./components/MuiComponents/MuiComponents";
 import MuiCreateTheme from "./components/MuiCreateTheme/MuiCreateTheme";
@@ -14,7 +15,6 @@ import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		display: "flex",
-		wordBreak: "break-all",
 	},
 }));
 
@@ -44,6 +44,7 @@ const App = () => {
 						<MuiCreateTheme />
 						<MuiDrawer />
 						<MuiBreakpoints />
+						<MuiBox />
 					</Container>
 				</Container>
 			</div>
