@@ -1,10 +1,10 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Button, Container, IconButton } from "@mui/material";
+import { Button, Container, Hidden } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import NavbarMenu from "./components/DrawerComponent/DrawerComponent";
+import DrawerComponent from "./components/DrawerComponent/DrawerComponent";
 
 const useStyles = makeStyles({
 	menuButton: {
@@ -21,11 +21,13 @@ const NavbarComponent = () => {
 
 	return (
 		<AppBar position="sticky" color="primary">
-			<Container>
+			<Container maxWidth={false}>
 				<Toolbar disableGutters>
-					<NavbarMenu>
-						<MenuIcon />
-					</NavbarMenu>
+					<Hidden mdUp>
+						<DrawerComponent>
+							<MenuIcon />
+						</DrawerComponent>
+					</Hidden>
 					<Typography variant="h6" className={classes.title}>
 						Hellow
 					</Typography>

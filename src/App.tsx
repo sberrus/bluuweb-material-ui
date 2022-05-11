@@ -1,4 +1,5 @@
-import { Container } from "@mui/material";
+import { Container, Hidden } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import Header from "./components/Header/Header";
 import MuiBreakpoints from "./components/MuiBreakpoints/MuiBreakpoints";
 import MuiComponents from "./components/MuiComponents/MuiComponents";
@@ -10,25 +11,42 @@ import MuiMakeStyles from "./components/MuiMakeStyles/MuiMakeStyles";
 import MuiTypography from "./components/MuiTypography/MuiTypography";
 import NavbarComponent from "./components/NavbarComponent/NavbarComponent";
 
+const useStyles = makeStyles((theme) => ({
+	mainContainer: {
+		display: "flex",
+		wordBreak: "break-all",
+	},
+}));
+
 const App = () => {
+	const styles = useStyles();
+
 	return (
 		<>
-			<NavbarComponent />
-			<Container
-				sx={{
-					marginBottom: "3em",
-				}}
-			>
-				<Header />
-				<MuiComponents />
-				<MuiIcons />
-				<MuiTypography />
-				<MuiMakeStyles />
-				<MuiCreateTheme />
-				<MuiDrawer />
-				<MuiBreakpoints />
-				<MuiDrawerEstatico />
-			</Container>
+			<div id="main" className={styles.mainContainer}>
+				<Hidden mdDown>
+					<MuiDrawerEstatico />
+				</Hidden>
+				<Container
+					maxWidth={false}
+					disableGutters
+					sx={{
+						marginBottom: "3em",
+					}}
+				>
+					<NavbarComponent />
+					<Container maxWidth={false}>
+						<Header />
+						<MuiComponents />
+						<MuiIcons />
+						<MuiTypography />
+						<MuiMakeStyles />
+						<MuiCreateTheme />
+						<MuiDrawer />
+						<MuiBreakpoints />
+					</Container>
+				</Container>
+			</div>
 		</>
 	);
 };

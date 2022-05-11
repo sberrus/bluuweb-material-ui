@@ -10,10 +10,20 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
 // Icons
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { IconButton } from "@mui/material";
+import { Divider, IconButton } from "@mui/material";
 import Listas from "./Listas";
+import { makeStyles } from "@mui/styles";
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+	toolbar: theme.mixins.toolbar,
+	drawer: {
+		width: drawerWidth,
+		flexShrink: 0,
+	},
+	drawerPapper: { width: drawerWidth },
+}));
 
 const DrawerComponent = (props: any) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -29,12 +39,22 @@ const DrawerComponent = (props: any) => {
 		setShow(!show);
 	};
 
+	const styles = useStyles();
+
 	return (
 		<div>
 			<IconButton color="inherit" className={props.className} onClick={toggleDrawer()}>
 				{props.children}
 			</IconButton>
-			<Drawer anchor={"left"} open={show} onClose={toggleDrawer()}>
+			<Drawer
+				anchor={"left"}
+				open={show}
+				onClose={toggleDrawer()}
+				className={styles.drawer}
+				classes={{ paper: styles.drawerPapper }}
+			>
+				<div className={styles.toolbar}></div>
+				<Divider />
 				<Box role="presentation" onClick={toggleDrawer()} onKeyDown={toggleDrawer()}>
 					<Listas />
 				</Box>
