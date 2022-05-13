@@ -21,6 +21,8 @@ const MuiBox = () => {
 				</b>{" "}
 				que nos permite indicarle css personalizado
 			</p>
+
+			{/* En la nueva versión d MUI es preferible editar la caja utilizando la prop sx={{}} */}
 			<Box
 				sx={{
 					background: "black",

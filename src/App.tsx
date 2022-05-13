@@ -7,6 +7,7 @@ import MuiComponents from "./components/MuiComponents/MuiComponents";
 import MuiCreateTheme from "./components/MuiCreateTheme/MuiCreateTheme";
 import MuiDrawer from "./components/MuiDrawer/MuiDrawer";
 import MuiDrawerEstatico from "./components/MuiDrawerEstatico/MuiDrawerEstatico";
+import MuiGrid from "./components/MuiGrid/MuiGrid";
 import MuiIcons from "./components/MuiIcons/MuiIcons";
 import MuiMakeStyles from "./components/MuiMakeStyles/MuiMakeStyles";
 import MuiTypography from "./components/MuiTypography/MuiTypography";
@@ -45,6 +46,7 @@ const App = () => {
 						<MuiDrawer />
 						<MuiBreakpoints />
 						<MuiBox />
+						<MuiGrid />
 					</Container>
 				</Container>
 			</div>
